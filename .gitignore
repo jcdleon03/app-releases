@@ -1,3 +1,6 @@
 *.keystore
 *.jks
 .env
+
+# Build outputs
+vlc-skins/**/dist/
