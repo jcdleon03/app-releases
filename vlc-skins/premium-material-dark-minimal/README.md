@@ -1,28 +1,37 @@
 # Premium Material Dark Minimal (VLC Skin)
 
-A ready-to-use VLC Skin2 package with a dark, minimal, material-inspired layout.
+This is a **real VLC Skin2 starter** for a premium material-inspired, dark, minimalistic look.
 
-## What you get
+## Included
 
-- Working Skin2 theme (`skin2/theme.xml`)
-- Text-only source repository (bitmap assets are generated at build time)
-- Color tokens (`colors.json`)
-- Design reference (`skin-spec.md`)
-- Packaging script (`build-vlt.sh`)
+- Dark material token system (`colors.json`)
+- Design blueprint (`skin-spec.md`)
+- SVG icon set (`assets/`)
+- Buildable Skin2 project skeleton (`skin2/theme.xml`)
+- `.vlt` packaging script (`build-vlt.sh`)
 
-## Build
+## Quick start
+
+1. Open `skin2/theme.xml` in VLC Skin Editor.
+2. Import your button/slider PNG states and assign them to each control (`up`, `over`, `down`).
+3. Keep existing control IDs/layout or tune spacing as desired.
+4. Build package:
 
 ```bash
 bash vlc-skins/premium-material-dark-minimal/build-vlt.sh
 ```
 
-The build script generates required `skin2/*.bmp` files into a temp folder and packages everything into:
-
-- `vlc-skins/premium-material-dark-minimal/dist/premium-material-dark-minimal.vlt`
+5. Copy generated file:
+   - `vlc-skins/premium-material-dark-minimal/dist/premium-material-dark-minimal.vlt`
 
 ## Install
 
 - Linux: `~/.local/share/vlc/skins2/`
 - Windows: `%APPDATA%/vlc/skins2/`
 
-Select the new skin in VLC preferences and restart VLC.
+Then pick the skin in VLC settings and restart VLC.
+
+## Current status
+
+- Layout, zones, and control wiring are prepared.
+- Visual polish now mainly depends on adding your final bitmap states in Skin Editor.
