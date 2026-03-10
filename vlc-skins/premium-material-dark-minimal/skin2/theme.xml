@@ -1,3 +1,70 @@
+<!DOCTYPE Theme PUBLIC "-//VideoLAN//DTD VLC Skins V2.0//EN" "skin.dtd">
+<Theme version="2.0" tooltipfont="mainfont" magnet="15" alpha="255" movealpha="230">
+  <ThemeInfo name="Premium Material Dark Minimal" author="Codex" email="" webpage=""/>
+
+  <Font id="mainfont" file="" size="12"/>
+
+  <Bitmap id="bg.bmp" file="bg.bmp" alphacolor="#FF00FF"/>
+  <Bitmap id="topbar.bmp" file="topbar.bmp" alphacolor="#FF00FF"/>
+  <Bitmap id="stage.bmp" file="stage.bmp" alphacolor="#FF00FF"/>
+  <Bitmap id="bottombar.bmp" file="bottombar.bmp" alphacolor="#FF00FF"/>
+  <Bitmap id="knob.bmp" file="knob.bmp" alphacolor="#FF00FF"/>
+  <Bitmap id="seek_track.bmp" file="seek_track.bmp" alphacolor="#FF00FF"/>
+  <Bitmap id="vol_track.bmp" file="vol_track.bmp" alphacolor="#FF00FF"/>
+
+  <Bitmap id="buttons.bmp" file="buttons.bmp" alphacolor="#FF00FF">
+    <SubBitmap id="btn.prev.normal" x="0" y="0" width="44" height="44"/>
+    <SubBitmap id="btn.play.normal" x="44" y="0" width="44" height="44"/>
+    <SubBitmap id="btn.next.normal" x="88" y="0" width="44" height="44"/>
+    <SubBitmap id="btn.fs.normal" x="132" y="0" width="44" height="44"/>
+    <SubBitmap id="btn.min.normal" x="176" y="0" width="44" height="44"/>
+    <SubBitmap id="btn.max.normal" x="220" y="0" width="44" height="44"/>
+    <SubBitmap id="btn.close.normal" x="264" y="0" width="44" height="44"/>
+
+    <SubBitmap id="btn.prev.hover" x="0" y="44" width="44" height="44"/>
+    <SubBitmap id="btn.play.hover" x="44" y="44" width="44" height="44"/>
+    <SubBitmap id="btn.next.hover" x="88" y="44" width="44" height="44"/>
+    <SubBitmap id="btn.fs.hover" x="132" y="44" width="44" height="44"/>
+    <SubBitmap id="btn.min.hover" x="176" y="44" width="44" height="44"/>
+    <SubBitmap id="btn.max.hover" x="220" y="44" width="44" height="44"/>
+    <SubBitmap id="btn.close.hover" x="264" y="44" width="44" height="44"/>
+
+    <SubBitmap id="btn.prev.down" x="0" y="88" width="44" height="44"/>
+    <SubBitmap id="btn.play.down" x="44" y="88" width="44" height="44"/>
+    <SubBitmap id="btn.next.down" x="88" y="88" width="44" height="44"/>
+    <SubBitmap id="btn.fs.down" x="132" y="88" width="44" height="44"/>
+    <SubBitmap id="btn.min.down" x="176" y="88" width="44" height="44"/>
+    <SubBitmap id="btn.max.down" x="220" y="88" width="44" height="44"/>
+    <SubBitmap id="btn.close.down" x="264" y="88" width="44" height="44"/>
+  </Bitmap>
+
+  <Window id="main" x="60" y="60" visible="true" dragdrop="true">
+    <Layout id="default" width="1200" height="720" minwidth="1200" maxwidth="1200" minheight="720" maxheight="720">
+      <Image id="bg" image="bg.bmp" action="move"/>
+      <Image id="topbar" image="topbar.bmp" x="0" y="0" action="move"/>
+      <Image id="stagebg" image="stage.bmp" x="24" y="84" action="move"/>
+      <Video id="video" x="24" y="84" width="1152" height="528"/>
+      <Image id="controlsbg" image="bottombar.bmp" x="24" y="620" action="move"/>
+
+      <Text id="title" x="24" y="26" width="780" text="$N" font="mainfont" color="#E9EDF5"/>
+      <Text id="time" x="910" y="646" width="200" text="$t / $D" font="mainfont" color="#9AA4B5"/>
+
+      <Button id="btnPrev" x="60" y="636" up="btn.prev.normal" over="btn.prev.hover" down="btn.prev.down" action="playlist.previous()" tooltiptext="Previous"/>
+      <Button id="btnPlay" x="106" y="636" up="btn.play.normal" over="btn.play.hover" down="btn.play.down" action="vlc.play()" tooltiptext="Play / Pause"/>
+      <Button id="btnNext" x="152" y="636" up="btn.next.normal" over="btn.next.hover" down="btn.next.down" action="playlist.next()" tooltiptext="Next"/>
+
+      <Slider id="seek" x="250" y="646" points="(0,0),(650,0)" value="time" up="knob.bmp" down="knob.bmp" over="knob.bmp" thickness="14" tooltiptext="Seek">
+        <SliderBackground id="seekbg" image="seek_track.bmp"/>
+      </Slider>
+
+      <Slider id="volume" x="1030" y="646" points="(0,0),(90,0)" value="volume" up="knob.bmp" down="knob.bmp" over="knob.bmp" thickness="14" tooltiptext="Volume">
+        <SliderBackground id="volbg" image="vol_track.bmp"/>
+      </Slider>
+
+      <Button id="btnFullscreen" x="1132" y="636" up="btn.fs.normal" over="btn.fs.hover" down="btn.fs.down" action="vlc.fullscreen()" tooltiptext="Fullscreen"/>
+      <Button id="btnMin" x="1048" y="14" up="btn.min.normal" over="btn.min.hover" down="btn.min.down" action="vlc.minimize()" tooltiptext="Minimize"/>
+      <Button id="btnMax" x="1096" y="14" up="btn.max.normal" over="btn.max.hover" down="btn.max.down" action="main.maximize()" tooltiptext="Maximize"/>
+      <Button id="btnClose" x="1144" y="14" up="btn.close.normal" over="btn.close.hover" down="btn.close.down" action="vlc.quit()" tooltiptext="Quit VLC"/>
 <?xml version="1.0" encoding="UTF-8"?>
 <Theme version="2.0" tooltipfont="mainFont" magnet="15" alpha="255" movealpha="230">
   <ThemeInfo
