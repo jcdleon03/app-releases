@@ -65,6 +65,57 @@
       <Button id="btnMin" x="1048" y="14" up="btn.min.normal" over="btn.min.hover" down="btn.min.down" action="vlc.minimize()" tooltiptext="Minimize"/>
       <Button id="btnMax" x="1096" y="14" up="btn.max.normal" over="btn.max.hover" down="btn.max.down" action="main.maximize()" tooltiptext="Maximize"/>
       <Button id="btnClose" x="1144" y="14" up="btn.close.normal" over="btn.close.hover" down="btn.close.down" action="vlc.quit()" tooltiptext="Quit VLC"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<Theme version="2.0" tooltipfont="mainFont" magnet="15" alpha="255" movealpha="230">
+  <ThemeInfo
+    name="Premium Material Dark Minimal"
+    author="Codex"
+    email=""
+    webpage=""
+    version="0.2.0" />
+
+  <Font id="mainFont" file="" size="12" />
+
+  <!-- NOTE:
+       VLC Skin2 primarily expects raster image resources in production skins.
+       This starter theme keeps drawing primitive-first so you can open/import
+       and then replace elements with your preferred PNG assets in Skin Editor.
+  -->
+
+  <Window id="main" x="50" y="50" visible="true" dragdrop="true">
+    <Layout id="default" width="1200" height="720" minwidth="1000" maxwidth="2200" minheight="560" maxheight="1400">
+      <!-- Root background -->
+      <Rectangle x="0" y="0" width="1200" height="720" color="#0F1115" />
+
+      <!-- Top app bar -->
+      <Rectangle x="0" y="0" width="1200" height="72" color="#151923" />
+      <Text id="appTitle" x="28" y="26" text="Premium Material VLC" color="#E9EDF5" font="mainFont" />
+      <Text id="trackTitle" x="420" y="26" text="$N" color="#9AA4B5" font="mainFont" />
+
+      <!-- Window controls -->
+      <Button id="btnMin" x="1080" y="18" up="" over="" down="" action="minimize" tooltiptext="Minimize" />
+      <Button id="btnMax" x="1120" y="18" up="" over="" down="" action="maximize" tooltiptext="Maximize" />
+      <Button id="btnClose" x="1160" y="18" up="" over="" down="" action="quit" tooltiptext="Close" />
+
+      <!-- Video stage -->
+      <Video x="24" y="84" width="1152" height="528" />
+
+      <!-- Bottom control bar -->
+      <Rectangle x="24" y="620" width="1152" height="76" color="#1B2130" />
+
+      <!-- Transport controls -->
+      <Button id="btnPrev" x="60" y="636" up="" over="" down="" action="prev" tooltiptext="Previous" />
+      <Button id="btnPlay" x="106" y="632" up="" over="" down="" action="play" tooltiptext="Play/Pause" />
+      <Button id="btnNext" x="162" y="636" up="" over="" down="" action="next" tooltiptext="Next" />
+
+      <!-- Seek row -->
+      <Slider id="seek" x="250" y="650" width="650" height="10" up="" down="" points="1000" value="$T" />
+      <Text id="timeCur" x="915" y="646" text="$t" color="#9AA4B5" font="mainFont" />
+      <Text id="timeDur" x="980" y="646" text="$D" color="#9AA4B5" font="mainFont" />
+
+      <!-- Right controls -->
+      <Slider id="volume" x="1035" y="650" width="90" height="10" up="" down="" points="100" value="$V" />
+      <Button id="btnFs" x="1134" y="636" up="" over="" down="" action="fullscreen" tooltiptext="Fullscreen" />
     </Layout>
   </Window>
 </Theme>

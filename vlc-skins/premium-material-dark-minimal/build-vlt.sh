@@ -28,4 +28,9 @@ import shutil
 shutil.rmtree(r'''$TMPDIR''', ignore_errors=True)
 PY
 
+(
+  cd "$ROOT"
+  zip -rq "$PKG" skin2 assets colors.json skin-spec.md README.md
+)
+
 echo "Built: $PKG"
